@@ -844,88 +844,134 @@ path:hover, circle:hover {
 
 /* Contact Section */
 .contact {
-    background: var(--dark-color);
-    padding: 60px 20px 100px;
+  background-image: url('https://static1.anpoimages.com/wordpress/wp-content/uploads/2022/07/googleMapsTricksHero.jpg'); /* Add your map image path */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 
+.section_title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Form container */
 .contact_container {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  backdrop-filter: blur(10px); /* Blurring background */
+  border-radius: 8px;
 }
 
-.contact_container .contact_form {
-    max-width: 60%;
+.contact_form {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+  color: #333;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #007BFF;
+  background-color: #fff;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Info Section */
+.contact_text {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact_items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact_items i {
+  font-size: 2rem; /* Larger icons for emphasis */
+  color: #007BFF;
+  margin-right: 12px;
+  transition: transform 0.3s;
+}
+
+.contact_items i:hover {
+  transform: scale(1.2); /* Slightly larger on hover */
+}
+
+.contact_details h3 {
+  margin: 0;
+  font-size: 1.5rem; /* Larger heading */
+}
+
+.contact_details p {
+  margin: 5px 0 0;
+  color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact_container {
+    flex-direction: column;
+  }
+  
+  .contact_form, .contact_text {
     width: 100%;
+  }
 }
-
-.contact_container .contact_form .field {
-    margin: 20px 0;
-}
-
-.contact_container .contact_form .field label {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.contact_container .contact_form .field input {
-    width: 100%;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    background-color: var(--light-gray-color);
-    border: 1px solid #ccc;
-}
-
-.contact_container .contact_form textarea {
-    width: 100%;
-    height: 200px;
-    padding: 12px;
-    font-size: 16px;
-    background-color: var(--light-gray-color);
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    resize: vertical;
-}
-
-.contact_container .contact_form .button {
-    padding: 8px 28px;
-    border: 2px solid transparent;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background: var(--primary-color);
-    color: var(--white-color);
-    font-size: 17px;
-    font-weight: 600;
-    transition: all 0.4s ease;
-}
-
-
-.contact_container .contact_form .button:hover {
-    color: var(--white-color);
-    /* background: transparent; */
-    background-color: var(--secondary-color);
-    border-color: var(--primary-color);
-}
-
-.contact_text .contact_items {
-    display: flex;
-    gap: 20px;
-    margin: 80px 0;
-    color: var(--primary-color);
-}
-
-.contact_text .contact_items i {
-    font-size: 32px;
-    margin-top: 5px;
-    color: var(--primary-color);
-}
-
 /* Footer Section */
 footer {
     background: #1b1b1b;
